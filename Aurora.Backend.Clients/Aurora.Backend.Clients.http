@@ -1,0 +1,6 @@
+@Aurora.Backend.Clients_HostAddress = http://localhost:5084
+
+GET {{Aurora.Backend.Clients_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

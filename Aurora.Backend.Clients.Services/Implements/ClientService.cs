@@ -208,7 +208,9 @@ public class ClientService : IClientService
                     Response = false
                 };
 
-            _unitOfWork.GetRepository<Client>().Delete(resultQuery);
+            resultQuery.Active = false;
+            resultQuery.UpdatedAt = DateTime.Now;
+            
             await _unitOfWork.CommitAsync();
             
             result = new Result<bool>

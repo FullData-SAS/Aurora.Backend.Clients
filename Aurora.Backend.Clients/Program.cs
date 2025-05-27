@@ -65,7 +65,7 @@ builder.Services.AddCors();
 builder.Services.AddHealthChecks();
 
 var app = builder.Build();
-
+app.Urls.Add("http://0.0.0.0:5001");
 app.UseHealthChecks($"/{appName}/HealthCheck", new HealthCheckOptions()
 {
     // The following StatusCodes are the default assignments for the HealthStatus properties.

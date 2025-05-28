@@ -1,9 +1,9 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using A3.Backend.Identities.Services.Models;
 using Aurora.Backend.Clients.Services.Contracts;
 using Aurora.Backend.Clients.Services.Enumerables;
+using Aurora.Backend.Clients.Services.Models;
 using Aurora.Backend.Clients.Services.Models.Client;
 using Aurora.Backend.Clients.Services.Utils;
 

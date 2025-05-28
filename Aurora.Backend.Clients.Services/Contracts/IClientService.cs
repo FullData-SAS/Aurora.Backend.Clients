@@ -1,4 +1,4 @@
-using A3.Backend.Identities.Services.Models;
+using Aurora.Backend.Clients.Services.Models;
 using Aurora.Backend.Clients.Services.Models.Client;
 
 namespace Aurora.Backend.Clients.Services.Contracts;

@@ -1,6 +1,6 @@
 ﻿using Aurora.Backend.Clients.Services.Enumerables;
 
-namespace A3.Backend.Identities.Services.Models
+namespace Aurora.Backend.Clients.Services.Models
 {
     [Serializable]
     public class Result<T>

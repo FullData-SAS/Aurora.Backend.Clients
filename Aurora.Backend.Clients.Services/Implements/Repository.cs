@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using Aurora.Backend.Clients.Services.Contracts;
 using Aurora.Backend.Clients.Services.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +19,8 @@ public class Repository<T> : IRepository<T> where T : class
     public async Task<IEnumerable<T>> GetAllAsync() => await _dbSet.ToListAsync();
 
     public async Task<T> GetByIdAsync(Guid id) => await _dbSet.FindAsync(id);
+    
+    public async Task<T> GetAsync(Expression<Func<T, bool>> predicate) => await _dbSet.Where(predicate).FirstOrDefaultAsync();
 
     public async Task AddAsync(T entity) => await _dbSet.AddAsync(entity);
 

@@ -6,7 +6,7 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var version = "v1.0.2.0";
+var version = "v1.0.2.1";
 var appName = "Clients";
 
 builder.Services.AddControllers().AddNewtonsoftJson();
@@ -65,7 +65,7 @@ builder.Services.AddCors();
 builder.Services.AddHealthChecks();
 
 var app = builder.Build();
-app.Urls.Add("http://0.0.0.0:5001");
+// app.Urls.Add("http://0.0.0.0:5001");
 app.UseHealthChecks($"/{appName}/HealthCheck", new HealthCheckOptions()
 {
     // The following StatusCodes are the default assignments for the HealthStatus properties.

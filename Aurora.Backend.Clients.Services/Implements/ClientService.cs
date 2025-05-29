@@ -199,7 +199,7 @@ public class ClientService : IClientService
         Result<bool> result = new Result<bool>();
         try
         {
-            var resultQuery = await _unitOfWork.GetRepository<Client>().GetByIdAsync(guid);
+            var resultQuery = await _unitOfWork.GetRepository<Client>().GetAsync(x => x.Id == guid && x.Active == true);
             if (resultQuery == null)
                 return new Result<bool>
                 {
